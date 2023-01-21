@@ -67,6 +67,7 @@
     <Build Include="DBO\StoredProcedures\spUser_Delete.sql" />
     <Build Include="DBO\StoredProcedures\spUser_Insert.sql" />
     <Build Include="DBO\StoredProcedures\spUser_Update.sql" />
+    <Build Include="DBO\CoffeeSchema.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Script.PostDeployment.sql" />
