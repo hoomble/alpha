@@ -9,7 +9,6 @@ namespace DataAccess.Models;
 public class OrderModel
 {
     public int OrderID { get; set; }
-    public string OrderStatus { get; set; }
     public int DrinkID { get; set; }
 
     public int Price { get; set; }

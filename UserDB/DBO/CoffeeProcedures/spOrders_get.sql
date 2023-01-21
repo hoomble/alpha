@@ -2,6 +2,6 @@
 	@OrderID int
 AS
 begin
-	select OrderID, OrderStatus, DrinkID, Price, EmployeeID from dbo.[Orders]
+	select OrderID,  DrinkID, Price, EmployeeID from dbo.[Orders]
 	where OrderID = @OrderID;
 end

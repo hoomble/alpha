@@ -2,11 +2,9 @@
 GO
 CREATE TABLE Orders(
 	[OrderID] int NOT NULL PRIMARY KEY IDENTITY,
-	[OrderStatus] int,
 	[DrinkID] int NOT NULL,
 	[Price] int NOT NULL,
-	[EmployeeID] int NOT NULL,
-	FOREIGN KEY ([OrderStatus]) REFERENCES OrderStatus([StatusID]),
+	[EmployeeID] int  NOT NULL,
 	FOREIGN KEY ([DrinkID]) REFERENCES Drinks([DrinkID]),
 	FOREIGN KEY ([EmployeeID]) REFERENCES Employees([EmployeeID])
 );
@@ -35,11 +33,7 @@ CREATE TABLE Employees(
 );
 GO
 
-CREATE TABLE OrderStatus(
-	[StatusID] int NOT NULL PRIMARY KEY IDENTITY,
-	[Desc] NVARCHAR(50) NOT NULL
-);
-GO
+
 
 CREATE TABLE Rewards(
 	[CustomerID] int NOT NULL,

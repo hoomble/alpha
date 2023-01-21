@@ -28,7 +28,7 @@ namespace DataAccess.Data
         }
 
         public Task InsertOrder(OrderModel order) =>
-          _db.SaveData("dbo.spOrders_Insert", new { order.OrderID, order.OrderStatus, order.DrinkID, order.Price, order.EmployeeID });
+          _db.SaveData("dbo.spOrders_Insert", new { order.OrderID, order.DrinkID, order.Price, order.EmployeeID });
 
         public Task UpdateOrder(OrderModel order) =>
             _db.SaveData("dbo.spOrders_Update", order);
