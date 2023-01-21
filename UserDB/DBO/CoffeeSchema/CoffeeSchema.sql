@@ -1,6 +1,6 @@
 ﻿CREATE SCHEMA [Coffee];
 GO
-CREATE TABLE ORDERS(
+CREATE TABLE Orders(
 	[OrderID] int NOT NULL PRIMARY KEY IDENTITY,
 	[OrderStatus] int,
 	[DrinkID] int NOT NULL,

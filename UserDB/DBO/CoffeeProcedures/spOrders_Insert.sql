@@ -1,6 +1,11 @@
 ﻿CREATE PROCEDURE [dbo].[spOrders_Insert]
-	@param1 int = 0,
-	@param2 int
+	@OrderID int,
+	@OrderStatus nvarchar(50),
+	@DrinkID int,
+	@Price int,
+	@EmployeeID int
 AS
-	SELECT @param1, @param2
-RETURN 0
+begin
+	insert into dbo.[Orders] (OrderID, OrderStatus, DrinkID, Price, EmployeeID)
+	values (@OrderID, @OrderStatus, @DrinkID, @Price, @EmployeeID);
+end

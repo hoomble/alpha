@@ -5,18 +5,18 @@
         public static void ConfigureApi(this WebApplication app)
         {
             // Used for endpoint mapping
-            app.MapGet("/Users", GetUsers);
-            app.MapGet("/Users/{id}", GetUser);
-            app.MapPost("/Users", InsertUser);
-            app.MapPut("/Users", UpdateUser);
-            app.MapDelete("/Users", DeleteUser);
+            app.MapGet("/Orders", GetOrders);
+            app.MapGet("/Orders/{id}", GetOrder);
+            app.MapPost("/Orders", InsertOrder);
+            app.MapPut("/Orders", UpdateOrder);
+            app.MapDelete("/Orders", DeleteOrder);
         }
 
-        private static async Task<IResult> GetUsers(IUserData data)
+        private static async Task<IResult> GetOrders(IOrderData data)
         {
             try
             {
-                return Results.Ok(await data.GetUsers());
+                return Results.Ok(await data.GetOrders());
             }
             catch (Exception ex)
             {
@@ -24,11 +24,11 @@
             }
         }
 
-        private static async Task<IResult> GetUser(int id, IUserData data)
+        private static async Task<IResult> GetOrder(int id, IOrderData data)
         {
             try
             {
-                var results = await data.GetUser(id);
+                var results = await data.GetOrder(id);
                 if(results == null)
                 {
                     return Results.NotFound();
@@ -40,11 +40,11 @@
                 return Results.Problem(ex.Message);
             }
         }
-        private static async Task<IResult> InsertUser(UserModel user, IUserData data)
+        private static async Task<IResult> InsertOrder(OrderModel order, IOrderData data)
         {
             try
             {
-                await data.InsertUser(user);
+                await data.InsertOrder(order);
                 return Results.Ok();
             }
             catch (Exception ex)
@@ -53,11 +53,11 @@
             }
         }
 
-        private static async Task<IResult> UpdateUser(UserModel user, IUserData data)
+        private static async Task<IResult> UpdateOrder(OrderModel order, IOrderData data)
         {
             try
             {
-                await data.UpdateUser(user);
+                await data.UpdateOrder(order);
                 return Results.Ok();
 
             }
@@ -68,11 +68,11 @@
         }
 
 
-        private static async Task<IResult> DeleteUser(int id, IUserData data)
+        private static async Task<IResult> DeleteOrder(int id, IOrderData data)
         {
             try
             {
-                await data.DeleteUser(id);
+                await data.DeleteOrder(id);
                 return Results.Ok();
             }
             catch (Exception ex)

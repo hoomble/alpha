@@ -1,6 +1,7 @@
-﻿CREATE PROCEDURE [spOrders].[get]
-	@param1 int = 0,
-	@param2 int
+﻿CREATE PROCEDURE [dbo].[spOrders_get]
+	@OrderID int
 AS
-	SELECT @param1, @param2
-RETURN 0
+begin
+	select OrderID, OrderStatus, DrinkID, Price, EmployeeID from dbo.[Orders]
+	where OrderID = @OrderID;
+end

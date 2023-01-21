@@ -70,6 +70,11 @@
     <Build Include="DBO\StoredProcedures\spUser_Insert.sql" />
     <Build Include="DBO\StoredProcedures\spUser_Update.sql" />
     <Build Include="DBO\CoffeeSchema\CoffeeSchema.sql" />
+    <Build Include="DBO\CoffeeProcedures\spOrders_getAll.sql" />
+    <Build Include="DBO\CoffeeProcedures\spOrders_get.sql" />
+    <Build Include="DBO\CoffeeProcedures\spOrders_Insert.sql" />
+    <Build Include="DBO\CoffeeProcedures\spOrders_update.sql" />
+    <Build Include="DBO\CoffeeProcedures\spOrders_delete.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Script.PostDeployment.sql" />
