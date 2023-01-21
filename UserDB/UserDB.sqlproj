@@ -59,6 +59,8 @@
     <Folder Include="DBO" />
     <Folder Include="DBO\Tables" />
     <Folder Include="DBO\StoredProcedures" />
+    <Folder Include="DBO\CoffeeProcedures" />
+    <Folder Include="DBO\CoffeeSchema" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="DBO\Tables\User.sql" />
@@ -67,7 +69,7 @@
     <Build Include="DBO\StoredProcedures\spUser_Delete.sql" />
     <Build Include="DBO\StoredProcedures\spUser_Insert.sql" />
     <Build Include="DBO\StoredProcedures\spUser_Update.sql" />
-    <Build Include="DBO\CoffeeSchema.sql" />
+    <Build Include="DBO\CoffeeSchema\CoffeeSchema.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Script.PostDeployment.sql" />
