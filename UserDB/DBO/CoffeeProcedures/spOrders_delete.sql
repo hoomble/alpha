@@ -1,7 +1,7 @@
 ﻿CREATE PROCEDURE [dbo].[spOrders_delete]
-	@OrderID int
+	@ID int
 AS
 begin
 	delete from dbo.[Orders]
-	where OrderID = @OrderID;
+	where Id = @ID;
 end

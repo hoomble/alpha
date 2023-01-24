@@ -1,11 +1,11 @@
 ﻿CREATE PROCEDURE [dbo].[spOrders_update]
-	@OrderID int,
-	@DrinkID int,
+	@ID int,
+	@Drink nvarchar(50),
 	@Price int,
-	@EmployeeID int
+	@EmployeeFname nvarchar(50)
 AS
 begin
 	update dbo.[Orders]
-	set   DrinkID = @DrinkID, Price = @Price, EmployeeID = @EmployeeID
-	where OrderID = @OrderID;
+	set   Drink = @Drink, Price = @Price, EmployeeFname = @EmployeeFname
+	where Id = @ID;
 end

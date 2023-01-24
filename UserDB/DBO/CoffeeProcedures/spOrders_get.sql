@@ -1,7 +1,7 @@
 ﻿CREATE PROCEDURE [dbo].[spOrders_get]
-	@OrderID int
+	@ID int
 AS
 begin
-	select OrderID,  DrinkID, Price, EmployeeID from dbo.[Orders]
-	where OrderID = @OrderID;
+	select Id, Drink, Price, EmployeeFname, OrderStatus, IsRewards from dbo.[Orders]
+	where Id = @ID;
 end

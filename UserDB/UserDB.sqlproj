@@ -57,24 +57,16 @@
   <ItemGroup>
     <Folder Include="Properties" />
     <Folder Include="DBO" />
-    <Folder Include="DBO\Tables" />
-    <Folder Include="DBO\StoredProcedures" />
     <Folder Include="DBO\CoffeeProcedures" />
-    <Folder Include="DBO\CoffeeSchema" />
+    <Folder Include="DBO\OrderTable" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="DBO\Tables\User.sql" />
-    <Build Include="DBO\StoredProcedures\spUser_getAll.sql" />
-    <Build Include="DBO\StoredProcedures\spUser_get.sql" />
-    <Build Include="DBO\StoredProcedures\spUser_Delete.sql" />
-    <Build Include="DBO\StoredProcedures\spUser_Insert.sql" />
-    <Build Include="DBO\StoredProcedures\spUser_Update.sql" />
-    <Build Include="DBO\CoffeeSchema\CoffeeSchema.sql" />
     <Build Include="DBO\CoffeeProcedures\spOrders_getAll.sql" />
     <Build Include="DBO\CoffeeProcedures\spOrders_get.sql" />
     <Build Include="DBO\CoffeeProcedures\spOrders_Insert.sql" />
     <Build Include="DBO\CoffeeProcedures\spOrders_update.sql" />
     <Build Include="DBO\CoffeeProcedures\spOrders_delete.sql" />
+    <Build Include="DBO\OrderTable\Table1.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Script.PostDeployment.sql" />
