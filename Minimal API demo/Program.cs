@@ -13,6 +13,8 @@ builder.Services.AddSingleton<IOrderData, OrderData>();
 
 var app = builder.Build();
 
+app.Logger.LogInformation($@"Application is running on {app.Environment.EnvironmentName} environment... at {DateTime.UtcNow}");
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

@@ -1,4 +1,6 @@
-﻿namespace Minimal_API_demo
+﻿using Microsoft.Extensions.Logging;
+
+namespace Minimal_API_demo
 {
     public static class Api
     {
