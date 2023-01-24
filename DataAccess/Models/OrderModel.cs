@@ -8,10 +8,12 @@ namespace DataAccess.Models;
 
 public class OrderModel
 {
-    public int OrderID { get; set; }
-    public int DrinkID { get; set; }
+    public int Id { get; set; }
+    public string Drink { get; set; }
 
     public int Price { get; set; }
 
-    public int EmployeeID { get; set; }
+    public string EmployeeFname { get; set; }
+    
+    public int IsRewards { get; set;  }
 }

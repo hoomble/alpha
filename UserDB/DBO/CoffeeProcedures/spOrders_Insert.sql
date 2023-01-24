@@ -1,9 +1,11 @@
 ﻿CREATE PROCEDURE [dbo].[spOrders_Insert]
-	@DrinkID int,
+	@IsRewards bit,
+	@OrderStatus nvarchar(50),
+	@Drink nvarchar(50),
 	@Price int,
-	@EmployeeID int
+	@EmployeeFname nvarchar(50)
 AS
 begin
-	insert into dbo.[Orders] (DrinkID, Price, EmployeeID)
-	values (@DrinkID, @Price, @EmployeeID);
+	insert into dbo.[Orders] (Drink, Price, OrderStatus, Employeefname, IsRewards)
+	values (@Drink, @Price, @OrderStatus,  @EmployeeFname, @IsRewards);
 end
