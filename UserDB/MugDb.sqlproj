@@ -59,6 +59,7 @@
     <Folder Include="DBO" />
     <Folder Include="DBO\CoffeeProcedures" />
     <Folder Include="DBO\OrderTable" />
+    <Folder Include="DBO\JoeSchema" />
     <Folder Include="DBO\EmployeeTable" />
   </ItemGroup>
   <ItemGroup>
@@ -68,12 +69,10 @@
     <Build Include="DBO\CoffeeProcedures\spOrders_update.sql" />
     <Build Include="DBO\CoffeeProcedures\spOrders_delete.sql" />
     <Build Include="DBO\OrderTable\Order.sql" />
+    <Build Include="DBO\JoeSchema\JoeSchema.sql" />
     <Build Include="DBO\EmployeeTable\Employees.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Script.PostDeployment.sql" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="UserDB.publish.xml" />
   </ItemGroup>
 </Project>
